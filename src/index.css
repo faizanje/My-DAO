@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: local("Roboto-Light"),
+   url("./fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  }
+  
+  .font-face-gm {
+    font-family: "Roboto-Light";
+   }
+   
