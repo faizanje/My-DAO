@@ -1,4 +1,4 @@
-import {useLocation, Routes, Route } from "react-router-dom";
+import {useLocation, Routes, Route} from "react-router-dom";
 import Home from './pages/Home/Home';
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
@@ -16,7 +16,7 @@ import Profile from "./pages/User/Profile";
 import NextBonus from "./pages/User/NextBonus";
 import EditProfile from "./pages/User/EditProfile";
 import Notifications from "./pages/User/Notifications";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import {TransitionGroup, CSSTransition} from "react-transition-group";
 import CreateUser from "./pages/Admin/CreateUser";
 import CreateTeam from "./pages/Admin/CreateTeam";
 import Wallet from "./pages/Admin/Wallet";
@@ -32,48 +32,48 @@ export default function MyRoutes() {
 
     return (
         // <TransitionGroup>
-            // <CSSTransition key={location.key} classNames="slide" timeout={500}>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    
-                    {/* User Routes */}
-                    <Route path="user" element={<User/>}>
-                        <Route path="dashboard" element={<UserDashboard />}/>
-                        <Route path="profile" element={<Profile />}/>
-                        <Route path="profile/bonus" element={<NextBonus />}/>
-                        <Route path="profile/edit" element={<EditProfile />}/>
-                        <Route path="profile/notifications" element={<Notifications/>}/>
-                        <Route path="profile/suggest" element={<SuggestBonus/>}/>
-                    </Route>
-                    
-                    {/* Admin Routes */}
-                    <Route path="admin" element={<Admin />}>
-                        <Route path="dashboard" element={<AdminDashboard />}/>
-                        <Route path="dashboard/:userId" element={<UserInfo />}/>
-                        <Route path="dashboard/user/create" element={<CreateUser/>}/>
-                        <Route path="teams" element={<Teams />}/>
-                        <Route path="team/create" element={<CreateTeam/>}/>
-                        <Route path="wallet" element={<Wallet />}/>
-                        <Route path="addfunds" element={<AddFunds />}/>
-                        <Route path="settings" element={<Settings />}/>
-                        <Route path="invite" element={<InviteUser />}/>
-                        <Route path="accounts" element={<Accounts/>}/>
-                    </Route>
-                    
-                    {/* Auth Routes */}
-                    <Route path="auth">
-                        <Route path="login" element={<Login />} />
-                        <Route path="restore" element={<Restore />} />
-                        <Route path="success" element={<Success />} />
-                        <Route path="newpass" element={<NewPassword />} />
-                        <Route path="register" element={<Register />} />
-                    </Route>
-                    <Route path="*" element={<Home />} />
-                    {/* <Route path="/dashboard" element={<PrivateRoute />}>
+        // <CSSTransition key={location.key} classNames="slide" timeout={500}>
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+
+            {/* User Routes */}
+            <Route path="user" element={<User/>}>
+                <Route path="dashboard" element={<UserDashboard/>}/>
+                <Route path="profile" element={<Profile/>}/>
+                <Route path="profile/bonus" element={<NextBonus/>}/>
+                <Route path="profile/edit" element={<EditProfile/>}/>
+                <Route path="profile/notifications" element={<Notifications/>}/>
+                <Route path="profile/suggest" element={<SuggestBonus/>}/>
+            </Route>
+
+            {/* Admin Routes */}
+            <Route path="admin" element={<Admin/>}>
+                <Route path="dashboard" element={<AdminDashboard/>}/>
+                <Route path="dashboard/:userId" element={<UserInfo/>}/>
+                <Route path="dashboard/user/create" element={<CreateUser/>}/>
+                <Route path="teams" element={<Teams/>}/>
+                <Route path="team/create" element={<CreateTeam/>}/>
+                <Route path="wallet" element={<Wallet/>}/>
+                <Route path="addfunds" element={<AddFunds/>}/>
+                <Route path="settings" element={<Settings/>}/>
+                <Route path="invite" element={<InviteUser/>}/>
+                <Route path="accounts" element={<Accounts/>}/>
+            </Route>
+
+            {/* Auth Routes */}
+            <Route path="auth">
+                <Route path="login" element={<Login/>}/>
+                <Route path="restore" element={<Restore/>}/>
+                <Route path="success" element={<Success/>}/>
+                <Route path="newpass" element={<NewPassword/>}/>
+                <Route path="register" element={<Register/>}/>
+            </Route>
+            <Route path="*" element={<Home/>}/>
+            {/* <Route path="/dashboard" element={<PrivateRoute />}>
                         <Route path="/dashboard" element={<Dashboard />} />
                     </Route> */}
-                </Routes >
-            // </CSSTransition>
+        </Routes>
+        // </CSSTransition>
         // </TransitionGroup>
     )
 }
